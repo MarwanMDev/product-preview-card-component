@@ -21,6 +21,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     />
+    <link href="./css/app.css" rel="stylesheet" />
+
     <title>Frontend Mentor | Product preview card component</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -34,25 +36,30 @@
       }
     </style>
   </head>
-  <body style="background-color: #f3eae3">
+  <body>
     <main
       class="container d-flex flex-column justify-content-center vh-100 align-items-center"
     >
-      <div class="card d-flex flex-row rounded" style="width: 50%">
+      <div class="card d-flex rounded" style="width: 50%">
         <img
-          src="./images/image-product-desktop.jpg"
-          class="rounded-start"
+          srcset="
+            ./images/image-product-mobile.jpg   768w,
+            ./images/image-product-desktop.jpg 1024w
+          "
+          sizes="(max-width: 768px) 720px, (max-width: 1024px) 1024px"
           alt="img"
-          style="width: 50%"
         />
         <div class="card-body">
           <h6
-            class="card-subtitle mb-2 text-muted text-uppercase"
-            style="letter-spacing: 0.2rem"
+            class="card-subtitle mb-2 text-muted text-uppercase mt-2"
+            style="letter-spacing: 0.3rem; font-size: 0.8rem"
           >
             Perfume
           </h6>
-          <h1 class="card-title mb-4" style="line-height: 2.2rem">
+          <h1
+            class="card-title mb-4 mt-4"
+            style="line-height: 2.2rem; font-weight: 700"
+          >
             Gabrielle Essence Eau De Parfum
           </h1>
           <p class="card-text text-muted" style="font-size: 0.9rem">
@@ -60,7 +67,7 @@
             Polge, Perfumer-Creator for the House of CHANEL.
           </p>
           <div class="d-flex flex-row align-items-center">
-            <h2 style="color: #497e6c">$149.99</h2>
+            <h2 style="color: #497e6c; font-weight: 700">$149.99</h2>
             <h3
               class="text-muted"
               style="font-size: 0.9rem; margin-left: 1.5rem"
