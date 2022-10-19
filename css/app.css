@@ -12,6 +12,17 @@ body {
   border-radius: 5px 0px 0px 5px;
 }
 
+.card a {
+  background-color: #3d8168;
+  color: #fff;
+  text-decoration: none;
+}
+
+.card a:hover {
+  background-color: #1a4031;
+  color: #fff;
+}
+
 @media only screen and (max-width: 768px) {
   .card {
     flex-direction: column;
